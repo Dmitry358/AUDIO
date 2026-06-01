@@ -22,7 +22,7 @@ public class VideoCallApplication {
   }
 }
 
-// WebSocket Handler per signaling
+
 @Component
 class SignalingHandler extends TextWebSocketHandler {
 
@@ -53,7 +53,7 @@ class SignalingHandler extends TextWebSocketHandler {
   }
 }
 
-// Configurazione WebSocket
+
 @Configuration
 @EnableWebSocket
 class WebSocketConfig implements WebSocketConfigurer {
