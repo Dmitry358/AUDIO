@@ -36,7 +36,6 @@ class SignalingHandler extends TextWebSocketHandler {
 
   @Override
   protected void handleTextMessage(WebSocketSession session, TextMessage message) throws Exception {
-    // Broadcast a tutti tranne chi ha mandato
     synchronized (sessions) {
       for (WebSocketSession s : sessions) {
         if (s.isOpen() && !s.getId().equals(session.getId())) {
